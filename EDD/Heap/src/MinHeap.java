@@ -12,6 +12,6 @@ class MinHeap{
     private int padre(int i){return (i - 1)/2;}
     private int izquierda(int i){return 2 * i + 1;}
     private int derecha(int i){return 2 * i + 2;}
-
+   //probando 
     
 }
