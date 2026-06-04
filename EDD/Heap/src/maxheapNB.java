@@ -3,8 +3,8 @@ public class maxheapNB {
     int heapSize;
 
     // Cambiamos el constructor para recibir una capacidad inicial, no un arreglo lleno.
-    public maxheapNB(int capacidadInicial) {
-        this.A = new int[capacidadInicial];
+    public maxheapNB(int[] A) {
+        this.A = A;
         this.heapSize = 0;
     }
 
@@ -20,11 +20,16 @@ public class maxheapNB {
 
     public void insertar(int v) {
         if (heapSize == A.length) {
+            //[1,2,3,v,x1,x2,x3] |size|
+            //size == A.length
             A = java.util.Arrays.copyOf(A, A.length * 2);
         }
+        //[1,2,3,size,0,0,0]
         int i = heapSize;
         heapSize++;
-        A[i] = Integer.MIN_VALUE;
+        //[1,2,3,i,size,0,0]
+        A[i] = Integer.MIN_VALUE; //0x8000_0000
+        //[1,2,3,0x8000_0000,size,0,0]
         increaseKey(i, v);
     }
 
@@ -33,6 +38,7 @@ public class maxheapNB {
             return false;
         } else {
             A[i] = v;
+            //[1,2,3,v,size,0,0]
             // CORRECCIÓN: Comparamos el valor de i (A[i]) con el valor del padre (A[padre(i)])
             while (i > 0 && A[i] > A[padre(i)]) {
                 swap(i, padre(i));
