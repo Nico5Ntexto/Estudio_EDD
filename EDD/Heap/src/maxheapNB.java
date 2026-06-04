@@ -58,10 +58,11 @@ public class maxheapNB {
 
     public static void main(String[] args) {
         // Creamos un heap con capacidad inicial de 15
-        maxheapNB h1 = new maxheapNB(15);
         
         // Arreglo de prueba
         int[] elementos = {1, 4, 52, 32, 5, 3, 4, 6, 76, 64, 23, 43, 1};
+        
+        maxheapNB h1 = new maxheapNB(elementos);
         
         // Insertamos los elementos correctamente uno por uno para construir el Max Heap
         System.out.println("Insertando elementos iniciales...");

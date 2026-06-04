@@ -59,7 +59,7 @@ class MinHeap{
         if(valor <= heap[i]) throw new IllegalArgumentException("Error: El nuevo valor debe ser mayor que el actual");
 
         heap[i] = valor;
-        heapifyUp(i);
+        heapifyDown(i);
     }
 
     public void decreaseKey(int i, int valor)throws IllegalArgumentException{
@@ -68,7 +68,7 @@ class MinHeap{
         if(valor >= heap[i]) throw new IllegalArgumentException("Error: El nuevo valor debe ser menor que el actual");
 
         heap[i] = valor;
-        heapifyDown(i);
+        heapifyUp(i);
     }
 
     @Override
