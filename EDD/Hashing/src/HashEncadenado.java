@@ -45,26 +45,26 @@ public class HashEncadenado {
     }
 
 public boolean eliminar2(int clave) {
-        int indice = funcionHash(clave);
+        int indice = h(clave);
         Nodo actual = tabla[indice];
         Nodo previo = null;
         
         while (actual != null) {
-            if (actual.clave == clave) {
+            if (actual.valor == clave) {
                 // Si es el primer elemento de la lista (la cabeza)
                 if (previo == null) {
-                    tabla[indice] = actual.siguiente;
+                    tabla[indice] = actual.next;
                 } 
                 // Si está en el medio o al final de la lista
                 else {
-                    previo.siguiente = actual.siguiente;
+                    previo.next = actual.next;
                 }
                 return true; // Eliminado con éxito
             }
             
             // Avanzamos los punteros para seguir iterando
             previo = actual;
-            actual = actual.siguiente;
+            actual = actual.next;
         }
         
         return false; // No se encontró el objeto
