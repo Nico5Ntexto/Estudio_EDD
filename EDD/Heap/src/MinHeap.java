@@ -16,6 +16,15 @@ class MinHeap{
         heapifyUp(size++);
     }
 
+    public boolean find(int value){
+        for(int n: heap) if(n == value) return true;
+        return false;
+    }
+
+    public boolean delete(int value){
+        return true;
+    }
+
     //----------------MÉTODOS PRIVADOS----------------
     private int padre(int i){return (i - 1)/2;}
     private int izquierda(int i){return 2 * i + 1;}
