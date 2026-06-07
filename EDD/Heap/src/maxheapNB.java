@@ -7,7 +7,7 @@ public class maxheapNB {
         this.A = A;
         this.heapSize = 0;
     }
-
+//probando modificacion 3
     public int padre(int i) {
         return (i - 1) / 2;
     }

@@ -9,6 +9,13 @@
             "name": "maxheapNB",
             "request": "launch",
             "mainClass": "maxheapNB",
+            "projectName": "Estudio_EDD_3fd3a1ff"
+        },
+        {
+            "type": "java",
+            "name": "maxheapNB",
+            "request": "launch",
+            "mainClass": "maxheapNB",
             "projectName": "Estudio_EDD_544ad5b4"
         },
         {
