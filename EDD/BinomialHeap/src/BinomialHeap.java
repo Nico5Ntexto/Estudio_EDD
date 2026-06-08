@@ -40,6 +40,8 @@ public class BinomialHeap{
         }
         return min;
     }
+    
+
 
     public int extractMin(){
         if(isEmpty()) return Integer.MIN_VALUE;
@@ -62,7 +64,7 @@ public class BinomialHeap{
         else previoMin.hermano = minimo.hermano;
 
         NodoBH hijoActual = minimo.hijo;
-        NodoBH nuevaCabezaHijos = null
+        NodoBH nuevaCabezaHijos = null;
 
         //Algoritmo para invertir lista
         while(hijoActual != null){
@@ -73,8 +75,8 @@ public class BinomialHeap{
             hijoActual = siguiente;
         }
 
-        NodoBH heapHijos = new BinomialHeap();
-        heapHijos.cabeza = nuewvaCabezaHijos;
+        BinomialHeap heapHijos = new BinomialHeap();
+        heapHijos.cabeza = nuevaCabezaHijos;
         cabeza = unirBH(heapHijos);
 
         return minimo.clave;
@@ -110,6 +112,25 @@ public class BinomialHeap{
             actual = actual.hermano;
         }
         return null;
+    }
+
+    private void decreaseKey(NodoBH nodo, int nuevoValor){
+        if(nuevoValor >= nodo.clave) return;
+
+        nodo.clave = nuevoValor;
+
+        NodoBH actual = nodo;
+        NodoBH padre = nodo.padre;
+
+        while(padre != null && actual.clave < padre.clave){
+
+        }
+    }
+
+    private void swapKeys(NodoBH a, NodoBH b){
+        int temp = a.clave;
+        a.clave = b.clave;
+        b.clave = temp;
     }
 
     private NodoBH unirBH(BinomialHeap aUnir){
