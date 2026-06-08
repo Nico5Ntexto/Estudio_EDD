@@ -137,7 +137,7 @@ public class BinomialHeap{
         BinomialHeap resultado = fusionarBH(this, aUnir);
         return consolidarNodos(resultado.cabeza);
     }
-
+//a
     private BinomialHeap fusionarBH(BinomialHeap bH1, BinomialHeap bH2){
         BinomialHeap BHResultante = new BinomialHeap();
 
